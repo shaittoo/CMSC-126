@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lab Exercise 7</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script>
+        function showImage() {
+            var select = document.getElementsByName("image")[0];
+            var imagePath = "images/" + select.value;
+            document.getElementById("imagePreview").src = imagePath;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Student Information Form</h2>
+    <form action="process.php" method="post">
+        Name: <input type="text" name="name" maxlength="40" required><br>
+        Age: <input type="number" name="age" min="0" max="99" required><br>
+        Email: <input type="email" name="email" maxlength="40" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            title="Please enter a valid email address"><br>
+        Course:
+        <select name="course" required>
+            <option value="">Select a course</option>
+            <option value="BS Computer Science">BS Computer Science</option>
+            <option value="BS Information Technology">BS Information Technology</option>
+            <option value="BS Software Engineering">BS Software Engineering</option>
+            <option value="BS Data Science">BS Data Science</option>
+            <option value="BS Cyber Security">BS Cyber Security</option>
+        </select><br>
+        Year Level: <input type="number" name="year_level" min="1" max="4" required><br>
+        Graduation Status:
+        <select name="graduation_status">
+            <option value="1">Graduating</option>
+            <option value="0">Not graduating</option>
+        </select><br>
+        Image:
+        <select name="image" onchange="showImage()">
+            <option value="image1.jpg">Blossom</option>
+            <option value="image2.jpg">Bubbles</option>
+            <option value="image3.jpg">Buttercup</option>
+        </select><br>
+        <img id="imagePreview" src="images/image1.jpg" alt="Image Preview" width="100" height="100"><br>
+        <input type="submit" name="submit" value="Submit">
+    </form>
+
+    <h2>Manage Records</h2>
+    <form action="view.php" method="get">
+        View Record by ID or Name:<br>
+        ID: <input type="number" name="id"><br>
+        Name: <input type="text" name="name"><br>
+        <input type="submit" value="View">
+    </form>
+    <form action="update.php" method="post">
+        Update Record with ID: <input type="number" name="id" required><br>
+        Name: <input type="text" name="name" maxlength="40"><br>
+        Age: <input type="number" name="age" min="0" max="99"><br>
+        Email: <input type="email" name="email" maxlength="40" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            title="Please enter a valid email address"><br>
+        Course:
+        <select name="course">
+            <option value="">Select a course</option>
+            <option value="BS Computer Science">BS Computer Science</option>
+            <option value="BS Information Technology">BS Information Technology</option>
+            <option value="BS Software Engineering">BS Software Engineering</option>
+            <option value="BS Data Science">BS Data Science</option>
+            <option value="BS Cyber Security">BS Cyber Security</option>
+        </select><br>
+        Year Level: <input type="number" name="year_level" min="1" max="4"><br>
+        Graduation Status:
+        <select name="graduation_status">
+            <option value="1">Graduating</option>
+            <option value="0">Not graduating</option>
+        </select><br>
+        Image:
+        <select name="image" onchange="showImage()">
+            <option value="image1.jpg">Blossom</option>
+            <option value="image2.jpg">Bubbles</option>
+            <option value="image3.jpg">Buttercup</option>
+        </select><br>
+        <img id="imagePreview" src="images/image1.jpg" alt="Image Preview" width="100" height="100"><br>
+        <input type="submit" name="update" value="Update">
+    </form>
+    <form action="delete.php" method="post">
+        Delete Record with ID: <input type="number" name="id" required>
+        <input type="submit" name="delete" value="Delete">
+    </form>
+</body>
+
+</html>
