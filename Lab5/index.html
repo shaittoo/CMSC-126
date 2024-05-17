@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <button id="showDateBtn">Show Current Date</button>
+    <br><br>
+    <input type="text" id="searchID" placeholder="Enter Student ID">
+    <button id="searchBtn">Search ID</button>
+    <br><br>
+    <button id="displayAllBtn">Display All</button>
+    <br><br>
+    <form id="studentForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="course">Course:</label><br>
+        <select id="course" name="course">
+            <option value="BA Food Appreciation">BA Food Appreciation</option>
+            <option value="BA Applied Poetry of the Future">BA Applied Poetry of the Future</option>
+            <option value="BA Uncensored Communications">BA Uncensored Communications</option>
+            <option value="BS Computer Repair Shop">BS Computer Repair Shop</option>
+            <option value="BS Video Gaming">BS Video Gaming</option>
+            <option value="BS Installing and Downloading">BS Installing and Downloading</option>
+        </select><br><br>
+        <button type="button" id="submitBtn">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

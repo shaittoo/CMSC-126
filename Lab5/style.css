@@ -1,0 +1,85 @@
+/* Style for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style for buttons */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Style for form */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Style for submit button */
+#submitBtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#submitBtn:hover {
+    background-color: #45a049;
+}
+
+/* Style for alerts */
+.alert {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 20px;
+    margin-top: 10px;
+}
+
+/* Style for alerts - success */
+.success {
+    background-color: #4CAF50;
+}
+
+/* Style for alerts - close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
